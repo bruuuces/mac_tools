@@ -5,14 +5,9 @@ alias cv="ps -ax | grep -v 'sudo nohup openconnect' | grep 'openconnect' | grep 
 alias r="skr cfg -l -cg -d dev"
 
 alias ud="
-cd $HOME/work/svn/doc
-svn update
-svnc
-rsync -av --progress --delete $HOME/work/svn/doc/* \"$CLOUD_DRIVE_DIR/Documents/Vega/doc\"
 cd $HOME/work/svn/devdoc
 svn update
 svnc
-rsync -av --progress --delete $HOME/work/svn/devdoc/* \"$CLOUD_DRIVE_DIR/Documents/Vega/devdoc\"
 cd ~
 "
 
@@ -20,11 +15,9 @@ alias ue="
 cd $HOME/work/svn/config
 svn update
 svnc
-rsync -av --progress --delete $HOME/work/svn/config/* \"$CLOUD_DRIVE_DIR/Documents/Vega/config\"
 cd $HOME/work/svn/config_release
 svn update
 svnc
-rsync -av --progress --delete $HOME/work/svn/config_release/* \"$CLOUD_DRIVE_DIR/Documents/Vega/config_release\"
 cd ~
 "
 
@@ -34,3 +27,5 @@ svn update
 svnc
 cd ~
 "
+
+alias gmr=~/.tools/script/util/git_merge_request.sh

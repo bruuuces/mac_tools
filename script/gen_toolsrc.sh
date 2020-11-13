@@ -13,6 +13,7 @@ run(){
   echo "" >> "$TOOLSRC"
 
   VPN_TOPJOY_HOST_IP=`sh $TOOLS_DIR/script/util/get_ip.sh $VPN_TOPJOY_DOMAIN_NAME`
+echo "$VPN_TOPJOY_DOMAIN_NAME --> $VPN_TOPJOY_HOST_IP"
   echo "export VPN_TOPJOY_HOST_IP=$VPN_TOPJOY_HOST_IP" >> "$TOOLSRC"
   VPN_TOPJOY_SERVER_CERT=`echo "no" | openconnect --protocol=anyconnect $VPN_TOPJOY_HOST_IP:$VPN_TOPJOY_PORT 2>&1 | grep "\-\-servercert" | awk '{print($2)}'`
   echo "export VPN_TOPJOY_SERVER_CERT=$VPN_TOPJOY_SERVER_CERT" >> "$TOOLSRC"
