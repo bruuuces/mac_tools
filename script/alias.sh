@@ -18,6 +18,12 @@ svnc
 cd $HOME/work/svn/config_release
 svn update
 svnc
+cd $HOME/work/svn/config_online
+svn update
+svnc
+cd $HOME/work/svn/config_preRelease
+svn update
+svnc
 cd ~
 "
 
